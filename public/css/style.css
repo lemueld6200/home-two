@@ -1,0 +1,180 @@
+/*               ___
+                /  |
+               /  =|
+              /   =`.
+             /      |
+            <_______|
+        __,.----'__`+
+       '------:_____]      LS     Sienar Fleet Systems'
+               _|_                Lambda-class Imperial Shuttle (1)
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+* {
+  box-sizing: border-box; /* text-transform: uppercase; */
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+.header h1 {
+  font-size: 50px;
+}
+/* Notes on enlarging Navigation 
+Topnav's overflow's hidden is preventing a section from working as intended. With the scaleY, with a class of HoverZoom. */
+
+/* Problems:
+Can't transform Navi without affecting text.
+Can't remove no clipping rule without messing up the structure
+cant add individual dropdown menu, it always picks the latest content and isn't unique. 
+
+
+I was able to solve problem two, after I realized changing overflow's hidden to visible didn't actually do anything to the 
+navigation bar itself and that it was still intact.I narrowed down the problem eventually by deleting a few lines of code 
+as a trial and error. Eventually, I decided to get rid of .topnav and just put background color inside topnav a 
+(the subsections on the bar). Too a couple of tries, many it's because I'm doing this midnight and haven't slept well lately
+but re-reading my code I realized I was missing the closing statement ";" which solved all my problems regarding the navigation
+bar. Only thing I have to do now is see what i can do about the text.
+*/
+
+/* Experimention */
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.hoverzoom:hover {
+  transform: scaleY(1.2);
+}
+
+.topnav a {
+  background-color: #333;
+  width: 33.33%;
+  /* height: 50%; */
+
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of 
+each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of 
+each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}

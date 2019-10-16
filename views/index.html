@@ -1,58 +1,138 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
+{% extends "layout.html" %}
 
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Welcome to Glitch!</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
+    {% block head %}
+    <style>
+      body {
+        background: #0f0e0e;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header {
+        padding: 20px;
+        text-align: center;
+        background: #0f0e0e;
+        color: white;
+      }
+      .header h1 {
+        font-size: 40px;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #212020;
+      }
+      li {
+        float: left;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 87.3px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+      .active {
+        background-color: #0967c8;
+      }
+      .footer {
+        left: 0;
+        bottom: 0;
+        width: 95%;
+        background-color: #0f0e0e;
+        color: white;
+        text-align: center;
+      }
+    </style>
+    {% endblock %}
   </head>
   <body>
-    <header>
-      <h1>
-        A Dream of the Future
-      </h1>
-    </header>
+    {% block body %}
+    <div class="header">
+      <h1> Hello there! </h1>
+      <p> Welcome to the Indexer (and my website I guess) </p>
+    </div>
+    <div class="footer" style="padding: 32px;">
+      <p>
+        Because everything takes time and I'm learning more as I go along. For now, the website's
+        navigation will be here. If you want to go to let's say Entry 06 you'd have to go through
+        this list of complied entries and available pages. This does not in any way represent the
+        final version of the website. Most of the website should be ready to drop jaws (or at least
+        I hope) by May. Until then this will be your main navigation around the site.
+      </p>
+      <hr size="2" /> <br />
+      <h4> Available Core Pages: </h4>
+      <ul>
+        <li>
+          <a href="/" class="active" onclick="alert('You\'re already here :P')">
+            The Indexer
+          </a>
+        </li>
+        <li><a href="/CoreAbout"> About </a></li>
+        <li><a href="/CoreHome"> Home </a></li>
+        <li><a href="/CorePortfolio"> Portfolio </a></li>
+      </ul>
 
-    <main>
-      <p class="bold">Oh hi,</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
-      </section>
-    </main>
+      <hr size="2" /> <br />
+      <h4> Available Sub-Core Pages: </h4>
+      <ul>
+        <li><a href="/Subcore/ContactMe"> About - Contact </a></li>
+        <li><a href="/Subcore/ConnectwithMe"> About - Connect </a></li>
+        <li><a href="/Subcore/Acknowledgements"> About - Credits </a></li>
+        <li><a href="/Subcore/JournalBlog"> Home - Journal </a></li>
+        <li><a href="/Subcore/JournalBlog02"> Home - Journal II </a></li>
+      </ul>
 
-    <footer>
-      Made with <a href="https://glitch.com">Glitch</a>!
-    </footer>
+      <hr size="2" /> <br />
+      <h4> Available Misc/Dev/Broken Pages: </h4>
+      <ul>
+        <li><a href="/ArraySchedule"> Array Schedule </a></li>
+        <li><a href="/general"> Test </a></li>
+        <li><a href="/W3Schools/Overview"> 3443t </a></li>
+        <li><a href="/Entry/Template"> Entry Base </a></li>
+        <li><a href="/Tracker"> List </a></li>
+        <li><a href="/Spaceship Adventure"> "Spaceship Adventure" </a></li>
+        <li><a href="/Side by Side Portfolio Quote"> Side Test </a></li>
+        <li><a href="/Projects/The Eclipse"> The Eclipse Project </a></li>
+        <li><a href="/404"> 404 </a></li>
+        <li><a href="/Archive/404"> 404v2 </a></li>
+        <li><a href="/Archive/The Viewer"> Old Portal </a></li>
+        <li><a href="/Tracker"> Tracker Thing </a> </li>
+      </ul>
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
-
+      <hr size="2" /> <br />
+      <h4> Available General Pages: </h4>
+      <ul>
+        <li><a href="/Entry/00"> Entry 00 </a></li>
+        <li><a href="/Entry/01"> Entry 01 </a></li>
+        <li><a href="/Entry/02"> Entry 02 </a></li>
+        <li><a href="/Entry/03"> Entry 03 </a></li>
+        <li><a href="/Entry/04"> Entry 04 </a></li>
+        <li><a href="/Entry/05"> Entry 05 </a></li>
+        <li><a href="/Entry/06"> Entry 06 </a></li>
+        <li><a href="/Entry/07"> Entry 07 </a></li>
+        <li><a href="/Entry/08"> Entry 08 </a></li>
+        <li><a href="/Entry/09"> Entry 09 </a></li>
+        <li><a href="/Entry/10"> Entry 10 </a></li>
+      </ul>
+      <br />
+      <br />
+      <hr size="2" />
+      <br />
+      <span class="thanks" style="text-align: center">
+        Acknowledgements: <br />
+        Huge thanks to the writers and coders over at W3Schools for there insightful examples And
+        organized tutorials. While a good big chunk of it is my code, some sections with borrowed
+        code are properly acknowledged in it's own page in About (coming soon). As well as the
+        various people who helped me get to this point. (i.e concept artists, mentors etc.)
+      </span>
+    </div>
+    {% endblock %}
   </body>
 </html>

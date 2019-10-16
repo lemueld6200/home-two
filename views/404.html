@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Home One </title>
+    {% block head %}
+    <style>
+      body {
+        background: #0f0e0e;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header {
+        padding: 20px;
+        text-align: center;
+        background: #0f0e0e;
+        color: white;
+      }
+      .header h1 {
+        font-size: 40px;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #212020;
+      }
+      li {
+        float: left;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 580px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+      .active {
+        background-color: #4caf50;
+      }
+      .footer {
+        left: 0;
+        bottom: 0;
+        width: 95%;
+        background-color: #0f0e0e;
+        color: white;
+        text-align: center;
+      }
+    </style>
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+    <div class="header">
+      <h1> 404 </h1>
+      <h3> You don't Exist.</h3>
+      <p>
+        You stumbled upon a non-existent page :O <br />
+        Check back in a few weeks and the page should be up. Most likely you opened a in-development
+        page.
+        <br />
+        <br />
+        If you feel this is a broken link, do not hesitate to alert me. <br />
+        You can notify me at
+        <a href="mailto:firstincommand111@gmail.com">firstincommand111@gmail.com</a>
+      </p>
+    </div>
+    <div class="footer" style="padding: 32px;">
+      <p> You might wanna go back to the Indexer now...</p>
+
+      <hr size="2" /> <br />
+      <ul>
+        <li
+          ><a href="index" class="active"> Fall Back to the <h1> Indexer </h1></a>
+        </li>
+      </ul>
+      <br />
+      <br />
+      <hr size="2" /> <br />
+      <p align="left"> </p
+      ><pre>
+"Sometimes the truth isn't good enough...sometimes people deserve more
+sometimes people deserve to have their faith rewarded."
+ - The Dark Knight
+</pre
+      >
+    </div>
+    {% endblock %}
+  </body>
+</html>

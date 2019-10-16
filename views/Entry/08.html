@@ -1,0 +1,94 @@
+{% extends "../Entry.html" %}
+
+<html>
+  <head>
+    <title> {% block title %} Entry 08 {% endblock %} </title>
+  </head>
+  <body>
+    {% block post %}
+    <h2> The Eclipse Super Star Destroyer! </h2>
+    <h5> October 7th, 2019</h5>
+    <!--- <img align="top" width = "950" height = "600" src=
+       "https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2FThe%20Indexer.png?v=1569213168827" 
+        alt="Test">   
+      <h4 align= "center">  </h4>
+
+Essay Checklist (classwork due Friday):
+2c - screenshot of algorithm with 2 sub algorithms (at least one of which should have math or logic)
+2c - explain algorithm
+2c - 1st part of screenshot
+2c - explain sub-algorithm
+2c - 2nd part of screenshot
+2c - explain 2nd sub-algorithm
+2d - screenshot of abstraction (function, list)
+2d - explanation of how the abstraction organizes the complexity of the program --->
+
+    <!--- Project Information --->
+    <p align="left"> <b> General Overview: </b></p>
+    <p align="left">
+      <a href="/Projects/The Eclipse.html"> Behold, the Eclipse! </a>
+    </p>
+    <p align="left">
+      In the past two weeks, over in the weekend I booted up Steam and decided to play a select-few
+      of my Steam games I ever played ever. One of those was Empire at War and oh boy, it was
+      amazing. I enjoyed every second of it. Empire at War is a . I just loved seeing the diverse
+      ships from the iconic TIEs to the Victory-class Star Destroyer and B-Wings, the fact that it
+      still had Legends content felt unreal too. It was jaw-dropping seeing the AI handled it's
+      fleet and it's offensive gameplay and I'd find myself on the desperate edge sometimes but
+      whenever I'd overcome major advances the reward was unquestionably worth it. The feeling of
+      just summoning five ISDs coupled with a couple of frigates, a Vindicator and Vader's executor
+      flagship felt awesome. <br />
+      <br />
+
+      And when I discovered that EaW had the Eclipse as a playable capital ship, I knew what I
+      needed to do. I spent 100k credits to manufracture the ship and sent it out to advance the
+      unguarded Rebel station. (at the time the AI has stretched it's fleets too thin and had a
+      continous advance, all of it's major ships and bomber "clusters" were far from sight) When I
+      had the Eclipse jump out of hyperspace out of the station it was jaw-dropping. Just how
+      massive the huge ship was. In Legends it's 35k meters, nearly as twice as long as two
+      Executor-class Super Star Destroyers, though some sources contradict it and others said the
+      Eclipse class is around 17k meters long. Anyways this isn't about measurements, this is about
+      a processing project. I had the option to make any object I wanted for a class-project. So
+      since I've been getting into EaW/FoC alot I decided to pay tribute to one of my favorite
+      Imperial Dreadnoughts. The project is done in processing, the program simply calls numerous
+      objects like quad() and rect() and I decided to make use for a mouseX and mouseY coordinate
+      system so I can tell where my cursor is in the canvas. That way building shapes especially
+      something as complicated as the quad function alot easier. A problem I had would definitely
+      have to be how the quad function is done. The numerous corners are points on a canvas. And
+      it's a bit weird to explain so bear with me. <br />
+      <br />
+
+      quad(1090, 423, 1065, 405, 570, 460, 570, 480 ); this is the shape that makes the lower part
+      of the top hull. If you switched around two coordinates like (1065, 405) with (570, 480) the
+      result is gonna be screwed pretty badly. So when you make a quad, you have to work either
+      counter-clockwise or clockwise. You can't just put coordinates in or the order will screw the
+      shape. <br />
+      <br />
+
+      Something I was never able to get working was importing .svgs (vector graphics) to a
+      processing canvas. And I've tried numerous times before and I never got it working. My plan
+      was to build the original hull/plating like you can see most of it now. On Inkscape I've
+      bitmap-traced a reference image, I can't recall the settings but I'm pretty sure one of two
+      .SVGs were Brightness Cutoff (0.990) with stack scans and most standard options. I've referred
+      to the processing.org site on importing vector graphics and tried importing it myself. With
+      the .SVG in the data folder of course, I've doubled checked at least six times and none of it
+      was working. I tried another .SVGs I had on site and nothing was working. I tried this too a
+      year ago back in Freshman year of AFSE. But nothing ever worked, I even got in a colleague to
+      help and we couldn't come up with a solution. I tried numerous different instances but
+      unfournately nothing worked. <br />
+      <br />
+
+      My plan was to trace the extremely small white details you can see in the reference image and
+      put that on top of my sketch so that it can be more complete. Because obviously replicating
+      all of those small white details would be extremely painful, tedious and boringly frustrating.
+      But the examples I was given never worked on my projects, so I have no clue on where to go on
+      importing .SVGs. Probably my next step if I even want to bother with this again would probably
+      be importing .SVGs on a local development application rather then a web application like
+      Glitch or Thimble. Though at this point, I have little hope honestly. As for what I'll do with
+      this in the future, it's definitely not going to be processing again. I'm hoping to re-make
+      all of my favorite Imperial/Republic/First Order Dreadnoughts in a 3D modelling program like
+      Blender. Hopefully with a primary ingition animation if I can.
+    </p>
+    {% endblock %}
+  </body>
+</html>

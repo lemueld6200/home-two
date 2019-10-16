@@ -1,0 +1,47 @@
+{% extends "default.html" %}
+
+<html>
+  <head>
+    {% block head %}
+    <title>{% block title %} Entry {% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/Entry Style.css" />
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          {% block post %} <strong><em>*GASP*</em></strong> this place is forbidden!? {% endblock %}
+
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>About Me</h2>
+          <div class="fakeimg" style="height:100px;">Image</div>
+          <br />
+          <a href="mailto:firstincommand111@gmail.com">Email Me</a>
+        </div>
+
+        <div class="card">
+          <h3>Popular Post</h3>
+          <p>
+            Why, hello there!
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Follow Me</h3>
+          <p>Some text..</p>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

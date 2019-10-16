@@ -1,0 +1,40 @@
+{% extends "../Entry.html" %}
+
+<html>
+  <head>
+    <title> {% block title %} The Eclipse {% endblock %} </title>
+    {% block head %}
+    <link rel="stylesheet" type="text/css" href="/css/MiscCoreProgram.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="/js/processing.js"></script>
+    {% endblock %}
+  </head>
+  <body>
+    {% block post %}
+    <h2> The Eclipse Star Destroyer </h2>
+    <summary>
+      <details> <a href="/Entry/08.html"> Appears in Entry 8 </a></details></summary
+    >
+    <h5> October 7th, 2019 - Processing </h5>
+    <p>
+      The Eclipse-class dreadnought, also known as the Eclipse-class Super Star Destroyer, was a
+      class of Imperial Super Star Destroyer manufactured by Kuat Drive Yards and mainly used around
+      six years after the Battle of Endor. Like the Sovereign-class, they were regarded as a new
+      generation of Super Star Destroyer. Infamous with it's giantic laser at the tip of the Star
+      Destroyer, capable of ripping apart planetary shields and entire capital ships in one shot,
+      using technology from the failed Death Star of course. Initate primary ingintion!
+    </p>
+    <script
+      src="Projects/The_Eclipse_Script.js"
+      type="application/processing"
+      style="width:90%"
+    ></script>
+    <canvas></canvas>
+    <img
+      src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2FFiypavp.png?v=1570461309312"
+      alt="Schematics"
+      style="width:90%"
+    />
+    {% endblock %}
+  </body>
+</html>
