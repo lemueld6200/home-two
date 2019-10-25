@@ -2,41 +2,44 @@
 
 <html>
   <head>
-    <title> {% block title %}{% endblock %} </title>
+    <title> {% block title %} {% endblock %} </title>
+    
+    {% block head %} {% endblock %}
   </head>
   <body>
     {% block body %}
-    <div class="header">
+    <header class="header">
       <h1> Hello there!</h1>
       <p> General Kenobi, you are a bold one. </p>
-    </div>
-    <div class="topnav">
-      <a href="/CoreAbout.html" class="hoverzoom"> About </a>
-      <a href="/CoreHome.html" class="hoverzoom"> Home </a>
-      <a href="/CorePortfolio.html" class="hoverzoom"> Portfolio </a>
-    </div>
+    </header>
+    <nav class="nav topnav">
+      <ul>
+        <li> <a href="/Core/About.html" class="hoverzoom"> About </a> </li>
+        <li> <a href="/Core/Home.html" class="hoverzoom"> Home </a> </li>
+        <li> <a href="/Core/Portfolio.html" class="hoverzoom"> Portfolio </a> </li>
+      </ul>
+    </nav>
     <br />
     <br /><br />
     <br /><br />
 
-    {% block content %}{% endblock %}
+    {% block content %} {% endblock %}
 
-    <!--- fix footer images alignment thing --->
-    <div class="footer" style="padding: 32px;">
+    <footer class="footer" style="padding: 32px;">
       <p> Hello there! </p>
       <hr size="2" /> <br />
-      <p align="left"> <b>Oswaldo De Los Santos </b>- Aspiring Game Developer </p>
+      <p align="left"> <b>Oswaldo De Los Santos</b> - Aspiring Game Developer </p>
 
       <br />
       <br />
       <h2> </h2>
-      <font align="right" size="2">
+      <p align="center">
         Acknowledgements: Huge thanks to the writers and coders over at W3Schools for there
         insightful examples And organized tutorials. Sections like the navigation bar and the
         dropdown menu has borrowed code from the website As well as the various people who helped me
         get to this point. (i.e concept artists, mentors etc.)
-      </font>
-    </div>
+      </p>
+    </footer>
     {% endblock %}
   </body>
 </html>
