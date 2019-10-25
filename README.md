@@ -70,4 +70,6 @@ The server file can be found in `/server.js`(obviously). This server runs using 
 ---
 
 **_THIS FILE WILL SELF DESTRUCT IN..._**
-_Whenever you feel like you understand how it works, and how to operate it on your own... **Good Luck~**_
+_Whenever you feel like you understand how it works, and how to operate it on your own...
+When you do replace this `README.md` with the one in **home-one**.
+**Good Luck~**_

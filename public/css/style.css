@@ -1,14 +1,3 @@
-/*               ___
-                /  |
-               /  =|
-              /   =`.
-             /      |
-            <_______|
-        __,.----'__`+
-       '------:_____]      LS     Sienar Fleet Systems'
-               _|_                Lambda-class Imperial Shuttle (1)
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 * {
   box-sizing: border-box; /* text-transform: uppercase; */
 }
@@ -28,22 +17,6 @@ body {
 .header h1 {
   font-size: 50px;
 }
-/* Notes on enlarging Navigation 
-Topnav's overflow's hidden is preventing a section from working as intended. With the scaleY, with a class of HoverZoom. */
-
-/* Problems:
-Can't transform Navi without affecting text.
-Can't remove no clipping rule without messing up the structure
-cant add individual dropdown menu, it always picks the latest content and isn't unique. 
-
-
-I was able to solve problem two, after I realized changing overflow's hidden to visible didn't actually do anything to the 
-navigation bar itself and that it was still intact.I narrowed down the problem eventually by deleting a few lines of code 
-as a trial and error. Eventually, I decided to get rid of .topnav and just put background color inside topnav a 
-(the subsections on the bar). Too a couple of tries, many it's because I'm doing this midnight and haven't slept well lately
-but re-reading my code I realized I was missing the closing statement ";" which solved all my problems regarding the navigation
-bar. Only thing I have to do now is see what i can do about the text.
-*/
 
 /* Experimention */
 .dropbtn {

@@ -1,8 +1,9 @@
 {
   "name": "home-one",
-  "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
+  "version": "1.0.0",
+  "description": "Hello there?",
   "main": "server.js",
+  "author": "Oswaldo De Los Santos",
   "scripts": {
     "start": "nodemon server"
   },
@@ -17,11 +18,13 @@
     "swig": "^1.4.2"
   },
   "devDependencies": {
-    "mustache": "^3.1.0",
     "nodemon": "^1.19.3"
   },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/home-one"
-  },
+  "keywords": [
+    "afse",
+    "portfolio",
+    "sophomore"
+  ],
+  "repository": "https://api.glitch.com/git/home-one",
   "license": "MIT"
 }

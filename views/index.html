@@ -1,7 +1,9 @@
-{% extends "layout.html" %}
+ {% extends "layout.html" %}
 
 <html>
   <head>
+    <title> {% block title %} The Indexer {% endblock %} </title>
+    
     {% block head %}
     <style>
       body {
@@ -55,32 +57,36 @@
   <body>
     {% block body %}
     <div class="header">
-      <h1> Hello there! </h1>
-      <p> Welcome to the Indexer (and my website I guess) </p>
+      <h1>Hello there!</h1>
+      <p>Welcome to the Indexer (and my website I guess)</p>
     </div>
     <div class="footer" style="padding: 32px;">
       <p>
-        Because everything takes time and I'm learning more as I go along. For now, the website's
-        navigation will be here. If you want to go to let's say Entry 06 you'd have to go through
-        this list of complied entries and available pages. This does not in any way represent the
-        final version of the website. Most of the website should be ready to drop jaws (or at least
-        I hope) by May. Until then this will be your main navigation around the site.
+        Because everything takes time and I'm learning more as I go along. For
+        now, the website's navigation will be here. If you want to go to let's
+        say Entry 06 you'd have to go through this list of complied entries and
+        available pages. This does not in any way represent the final version of
+        the website. Most of the website should be ready to drop jaws (or at
+        least I hope) by May. Until then this will be your main navigation
+        around the site.
       </p>
-      <hr size="2" /> <br />
-      <h4> Available Core Pages: </h4>
+      <hr size="2" />
+      <br />
+      <h4>Available Core Pages:</h4>
       <ul>
         <li>
           <a href="/" class="active" onclick="alert('You\'re already here :P')">
             The Indexer
           </a>
         </li>
-        <li><a href="/CoreAbout"> About </a></li>
-        <li><a href="/CoreHome"> Home </a></li>
-        <li><a href="/CorePortfolio"> Portfolio </a></li>
+        <li><a href="Core/About"> About </a></li>
+        <li><a href="Core/Home"> Home </a></li>
+        <li><a href="Core/Portfolio"> Portfolio </a></li>
       </ul>
 
-      <hr size="2" /> <br />
-      <h4> Available Sub-Core Pages: </h4>
+      <hr size="2" />
+      <br />
+      <h4>Available Sub-Core Pages:</h4>
       <ul>
         <li><a href="/Subcore/ContactMe"> About - Contact </a></li>
         <li><a href="/Subcore/ConnectwithMe"> About - Connect </a></li>
@@ -89,8 +95,9 @@
         <li><a href="/Subcore/JournalBlog02"> Home - Journal II </a></li>
       </ul>
 
-      <hr size="2" /> <br />
-      <h4> Available Misc/Dev/Broken Pages: </h4>
+      <hr size="2" />
+      <br />
+      <h4>Available Misc/Dev/Broken Pages:</h4>
       <ul>
         <li><a href="/ArraySchedule"> Array Schedule </a></li>
         <li><a href="/general"> Test </a></li>
@@ -103,11 +110,12 @@
         <li><a href="/404"> 404 </a></li>
         <li><a href="/Archive/404"> 404v2 </a></li>
         <li><a href="/Archive/The Viewer"> Old Portal </a></li>
-        <li><a href="/Tracker"> Tracker Thing </a> </li>
+        <li><a href="/Tracker"> Tracker Thing </a></li>
       </ul>
 
-      <hr size="2" /> <br />
-      <h4> Available General Pages: </h4>
+      <hr size="2" />
+      <br />
+      <h4>Available General Pages:</h4>
       <ul>
         <li><a href="/Entry/00"> Entry 00 </a></li>
         <li><a href="/Entry/01"> Entry 01 </a></li>
@@ -121,16 +129,18 @@
         <li><a href="/Entry/09"> Entry 09 </a></li>
         <li><a href="/Entry/10"> Entry 10 </a></li>
       </ul>
-      <br />
-      <br />
+      <br/>
+      <br/>
       <hr size="2" />
       <br />
       <span class="thanks" style="text-align: center">
         Acknowledgements: <br />
-        Huge thanks to the writers and coders over at W3Schools for there insightful examples And
-        organized tutorials. While a good big chunk of it is my code, some sections with borrowed
-        code are properly acknowledged in it's own page in About (coming soon). As well as the
-        various people who helped me get to this point. (i.e concept artists, mentors etc.)
+        Huge thanks to the writers and coders over at W3Schools for there
+        insightful examples And organized tutorials. While a good big chunk of
+        it is my code, some sections with borrowed code are properly
+        acknowledged in it's own page in About (coming soon). As well as the
+        various people who helped me get to this point. (i.e concept artists,
+        mentors etc.)
       </span>
     </div>
     {% endblock %}
