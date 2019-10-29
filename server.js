@@ -20,7 +20,7 @@ const app = (module.exports = new Koa())
     try {
       await next();
       if (ctx.status === 404) {
-        ctx.redirect("/404");
+        ctx.render("/404");
       }
     } catch (err) {
       ctx.status = err.status || 500;

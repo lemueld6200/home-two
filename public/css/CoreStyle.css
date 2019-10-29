@@ -1,18 +1,16 @@
-body {
-  font-family: Arial;
-  margin: 0;
-}
+/* CSS - CoreStyle.css */
+/* CoreAbout.html | CoreHome.html | CorePortfolio.html */
+
 * {
   box-sizing: border-box;
 }
 img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
   vertical-align: middle;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
+
+/* Slideshow and the Related */
 .container {
   position: relative;
 }
@@ -70,11 +68,21 @@ img {
 .demo {
   opacity: 0.6;
 }
-.active,
 .demo:hover {
   opacity: 1;
 }
 .collapsible {
+  background-color: white;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.pagebutton {
   background-color: white;
   color: white;
   cursor: pointer;
@@ -106,15 +114,19 @@ body {
   font-family: Arial;
   padding: 10px;
   background: #f1f1f1;
+  margin: 0;
 }
 .header {
-  padding: 30px;
+  padding: 15px;
   text-align: center;
   background: white;
 }
 .header h1 {
   font-size: 50px;
 }
+
+
+/*Dropdown */
 .dropbtn {
   background-color: #4CAF50;
   color: white;
@@ -149,38 +161,30 @@ body {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
-.hoverzoom:hover {
-  transform: scaleY(1.1);
-}
+
+/* Top Navigation */
 .topnav a {
   background-color: #333;
   width: 33.33%;
-  /* height: 50%; */
+  height: 50%;
 
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px;
   text-decoration: none;
 }
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
+
+
+/* "Basics" */
 p {
   display: inline-block;
 }
-
-.white a {
-  background-color: #ffffff;
-  color: black;
-}
-.white a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
 .leftcolumn {
   float: left;
   width: 75%;
@@ -190,12 +194,6 @@ p {
   width: 25%;
   background-color: #f1f1f1;
   padding-left: 20px;
-}
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
 }
 .card {
   background-color: white;
@@ -214,6 +212,8 @@ p {
   color: black;
   margin-top: 20px;
 }
+
+/* Pagination */
 .pagination {
   display: inline-block;
   margin-top: 20px;
@@ -232,6 +232,65 @@ p {
   background-color: #ddd;
 }
 
+/* Portfolio Project Overview */
+.overview { display: flex; flex-warp: row wrap; justify-content: center; align-items: center; height: 60%; }
+.overview > div img {
+   /*grow*/ text-align: center;  
+}
+.arrowTransition {
+  background-color: white;
+  padding: 0px 50% 20px 49.5%;
+  margin-top: 20px;}
+.overviewContent { display: }
+
+
+/* Quote */
+.quote {
+  border: 3px solid;
+  color: grey;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+}
+.quote::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.quote img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 10%;
+}
+.quote span {
+  font-size: 20px;
+  margin-right: 15px;
+  color: black;
+}
+.quote p {
+  color: black;
+}
+.quote i {
+  color: black;
+}
+
+/* Progress Bar */
+.quotebox progress { margin-left: 50px; }
+.quotebox h3 { margin-left: 50px; }
+.quotebox p { margin-left: 30px; }
+
+/* Other Screens */
+@media (max-width: 500px) {
+  .quote {
+    text-align: center;
+  }
+  .quote img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
 @media screen and (max-width: 800px) {
   .leftcolumn,
   .rightcolumn {
@@ -239,10 +298,10 @@ p {
     padding: 0;
   }
 }
-
 @media screen and (max-width: 400px) {
   .topnav a {
     float: none;
     width: 100%;
   }
 }
+iframe {width: 100%; overflow: hidden}

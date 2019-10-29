@@ -1,0 +1,25 @@
+{% extends "../Entry.html" %}
+
+<html>
+  <head>
+    <title>{% block title %} Entry ## {% endblock %}</title>
+  </head>
+  <body>
+    {% block post %}
+    <h2>  </h2>
+    <h5> 2019, October</h5>
+ 
+    <h4 align="center">
+      CONTENT
+    </h4>
+
+    <!--- Project Information --->
+    <p align="left"><b> General Overview: </b></p>
+    <p align="left"> MORE CONTENT </p>
+    <br />
+    <!--- QnA --->
+    <p><b> Q1. </b> QUESTION</p>
+    <blockquote> EVEN MORE CONTENT </blockquote>
+    {% endblock %}
+  </body>
+</html>

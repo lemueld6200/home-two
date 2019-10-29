@@ -1,0 +1,92 @@
+{% extends "../default.html" %}
+
+<html>
+  <head>
+    <title> {% block title %} Home {% endblock %} </title>
+    {% block head %}
+    <link rel="stylesheet" href="/css/CoreStyle.css" />
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %} <br><br><br><br>
+    
+<div class="container"> 
+  <div class="mySlides">
+    <img src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2FBlue-calm-hd-wallpaper.jpg?v=1571409912055" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2Flake_sunset_horizon_120304_1920x1080.jpg?v=1571409907884" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2Fcalifornia-sunset-hd-wallpaper-by-ethan-dow-iltwmt.jpg?v=1571409905340" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2F697142714.jpg?v=1571409899619" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2F3840x2160-stars-4k-hd-wallpaper-computer-desktop-wallpapers-in-fantastic-antique-10.jpg?v=1571409897367" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <img src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2F300068.jpg?v=1571409892472" style="width:100%">
+  </div>
+</div> 
+ <div class="clickDiv card" data-href="/index.html">
+      <h2> Hello there! </h2>
+       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+       occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </div>
+  <div class="clickDiv card" data-href="/Sub/Blog.html">
+      <h2> My CS Journey </h2>
+      <h5> Last Updated: 10/29/19 </h5>
+      <p> This blog mostly serves as a documentation of my Computer-Science Journey. Here you'll find commentary on various projects and projects from my Computer Science Classes
+      during my time in AFSE. It's regulary updated and there's always a new entry that appears in a couple of days, to be updated you can subscribe to this (Placeholder): RSS
+      Feed. (Once I figure out how that even works) </p>
+  </div>
+
+   <div class="clickDiv card" data-href="/Sub/UpdateLog.html">
+      <h2> Update Log </h2>
+      <h5> (Placeholder): Last Update was on...</h5>
+      <p> Use your head.. </p>
+    </div>
+  
+    <script>
+ /* Lemuel's clickDiv Code (i.e NOT MINES) */
+  $(".clickDiv").click(function(){
+    location.href = $(this).attr("data-href");
+  }); 
+      
+/* W3School's Slideshow Javascript Code (i.e NOT MINES) */
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // <--- Changes interval 
+}
+
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+    {% endblock %}
+  </body>
+</html>
