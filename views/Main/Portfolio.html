@@ -1,0 +1,93 @@
+{% extends "../default.html" %}
+<html>
+  <head>
+    {% block title %} Portfolio {% endblock %} {% block head %}
+    <link rel="stylesheet" type="text/css" href="/css/CoreStyle.css" /> {% endblock %}
+  </head>
+  <body> {% block content %} <br> <br>
+ 
+  <div class="clickDiv card" data-href="#">
+    <h2> Project Highlights </h2>
+    <p> Here will go four project highlights I want emphasised. Could be traditional projects or dev/mod teams I've been in </p>
+   </div> 
+  
+  <div class="overview card">
+   <div> <img src="http://www.richardplank.com/wp-content/uploads/2016/03/Black-Square-Division-2A.jpg"> </div>
+   <div> <img src="http://www.richardplank.com/wp-content/uploads/2016/03/Black-Square-Division-2A.jpg"> </div>
+   <div> <img src="http://www.richardplank.com/wp-content/uploads/2016/03/Black-Square-Division-2A.jpg"> </div>
+  </div>
+  
+  <div> <a class="arrowTransition card" href="javascript:alert('Button...works?');"> &crarr; </a> </div>
+  
+  <div class="overview overviewContent card">
+   <div> <img src="http://www.richardplank.com/wp-content/uploads/2016/03/Black-Square-Division-2A.jpg"> </div>
+   <div> <img src="http://www.richardplank.com/wp-content/uploads/2016/03/Black-Square-Division-2A.jpg"> </div>
+   <div> <img src="http://www.richardplank.com/wp-content/uploads/2016/03/Black-Square-Division-2A.jpg"> </div>
+  </div> <br> <br>
+    
+  <div class="clickDiv card" data-href="#">
+    <h2> Experience and Mastery </h2>
+    <p> Below is a list of how comfortable I am at different languages and how much experience/mastery I have.  </p>
+    
+   <div class="quotebox">
+    <br> <br> <h3> HTML </h3>
+    <p> While I'm no master over this, I've completed all the lessons in Sololearn on HTML Fundementals and feel confident enough to say I know the basics.
+    However, I feel I lack mastery and the proper know-how to do what I want though that mostly rests on experience and review. </p>
+    <progress value="75" max="100"> </progress>
+  
+    <br> <br> <h3> CSS </h3>
+    <progress value="65" max="100"> </progress>
+  
+    <br> <br> <h3> jQuery </h3>
+    <progress value="34" max = "100"> </progress>
+  
+    <br> <br> <h3> Javascript </h3>
+    <progress value="23" max = "100"> </progress>
+   </div>
+  </div> <br> <br> 
+  
+  <!--- PROGRAMS AND LANGUAGES COMMENTARY:
+  An observation on the progress tag, for some reason, whatever reason...
+  <progress value="22" max="100"> </progress> Gives me a *static* progress bar and works as I intended, however before doing this...
+  I originally did <progress> min"0" max="100" value ="1" </progress> gives me an ANIMATED progress bar and doesn't adhere to the parameters (seemingly)
+  Notice where the ">" is located in the first part of the tag? No clue why it goes animated if you put <progress> then <progress (paramaters)>
+  But hey! Bet it'll be useful...one day...or something. --->
+  
+  
+  <div class="container card">
+    <div class="quote"> 
+      <div class="numbertext"> 1/6 </div>
+      <img src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2FB1%20Sweats.png?v=1568569240107" alt="Avatar" style="width:90px">
+      <p> <span> B1-Battledroid </span> - Infantry Unit in CIS Ground Forces.</p> <br>
+      <i>"Roger Roger."</i>
+    </div>
+  </div>  
+ 
+  <div class="card">
+    <div class="quote">
+      <img src="https://cdn.glitch.com/09da7f12-a63f-40b7-96fc-c11f11027f60%2FB1%20Sweats.png?v=1568569240107" alt="Avatar" style="width:90px">
+      <p> <span> B1-Battledroid </span> - Infantry Unit in CIS Ground Forces.</p> <br>
+      <i>"Roger Roger."</i>
+    </div>
+  </div>  
+  
+  <!--- TESTAMENTS AND QUOTES COMMENTARY:
+  I was thinking of making the quotes, not side by side or in a typical list order. But more of a "quoteshow", basically
+  a slideshow but with quotes. This would also go in nicely with the quote generator you wanted to get up in running.  --->
+  
+    <script>    
+   /* Clickable Div(s) *//* ClickDiv */
+  $(".clickDiv").click(function(){
+    location.href = $(this).attr("data-href");
+  });
+  
+    /* overviewContent */
+  $(document).ready(function(){
+  $(".arrowTransition").click(function(){
+    $(".overviewContent").toggle();
+  });
+}); 
+    </script>
+    {% endblock %}
+  </body>
+</html>
