@@ -1,4 +1,5 @@
 {% extends "../default.html" %}
+
 <html>
   <head>
     {% block title %} Portfolio {% endblock %} {% block head %}
@@ -76,16 +77,14 @@
   a slideshow but with quotes. This would also go in nicely with the quote generator you wanted to get up in running.  --->
   
     <script>    
-   /* Clickable Div(s) *//* ClickDiv */
-  $(".clickDiv").click(function(){
-    location.href = $(this).attr("data-href");
-  });
   
     /* overviewContent */
   $(document).ready(function(){
   $(".arrowTransition").click(function(){
     $(".overviewContent").toggle();
   });
+    
+  $(".overviewContent").hide();
 }); 
     </script>
     {% endblock %}

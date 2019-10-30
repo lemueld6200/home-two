@@ -1,0 +1,90 @@
+{% extends "../default.html" %}
+<html>
+  <head>
+    <title> {% block title %} Blog {% endblock %} </title>
+    {% block head %}
+    <link rel="stylesheet" type="text/css" href="/css/SubcoreJBStyle.css"/>
+    {% endblock %}
+  </head>
+<body> {% block content %}
+<div class="row">
+  <div class="leftcolumn">
+    
+<div class="pagination">
+  <a> &laquo; </a>
+  <a class="nextSetBtn" >1</a>
+  <a class="nextSetBtn2">2</a> 
+  <a class="nextSetBtn3">3</a> 
+  <a class="nextSetBtn4">4</a>
+  <a> &raquo; </a>
+</div>
+    
+    <div class="clickDiv set1 CSAP card" data-href="/Entry/02.html">
+      <h2> Set1 </h2>
+    </div>
+    
+    <div class="clickDiv set2 card" data-href="/Entry/03.html">
+      <h2> Set2 </h2>
+    </div>
+    
+    <div class="clickDiv set3 card" data-href="/Entry/04.html">
+      <h2> Set3 </h2>
+    </div>
+    
+    <div class="clickDiv set4 card" data-href="/Entry/05.html">
+      <h2> Set4 </h2>
+    </div>
+    
+  </div>
+ </div>
+  
+<div class="pagination">
+  <a> &laquo; </a>
+  <a class="nextSetBtn" >1</a>
+  <a class="nextSetBtn2">2</a> 
+  <a class="nextSetBtn3">3</a> 
+  <a class="nextSetBtn4">4</a>
+  <a> &raquo; </a>
+</div>
+  
+<script>
+  /* All Hands on Deck! Default Settings onload! I'm so proud of myself, this script is fully mine, yay. */
+$(document).ready(function(){
+ $(".nextSetBtn").addClass("active"); 
+  $(".set2, .set3, .set4").hide() 
+   $(".set1").show() 
+});
+  
+  /* Forward & Backward Buttons don't have Functionality yet. */
+  
+  /* Page 1 */
+  $(".nextSetBtn").click(function(){
+   $(".nextSetBtn").addClass("active"); 
+    $(".nextSetBtn2, .nextSetBtn3, .nextSetBtn4").removeClass("active");
+     $(".set1").show(); $(".set2, .set3, .set4").hide();
+  });
+  
+  /* Page 2 */
+  $(".nextSetBtn2").click(function(){
+   $(".nextSetBtn2").addClass("active"); 
+    $(".nextSetBtn, .nextSetBtn3, .nextSetBtn4").removeClass("active");
+     $(".set2").show(); $(".set1, .set3, .set4").hide();
+  });
+  
+  /* Page 3 */
+  $(".nextSetBtn3").click(function(){
+   $(".nextSetBtn3").addClass("active"); 
+    $(".nextSetBtn, .nextSetBtn2, .nextSetBtn4").removeClass("active");
+     $(".set3").show(); $(".set1, .set2, .set4").hide();
+  });
+    
+  /* Page 4 */
+  $(".nextSetBtn4").click(function(){
+   $(".nextSetBtn4").addClass("active"); 
+    $(".nextSetBtn, .nextSetBtn2, .nextSetBtn3").removeClass("active");
+     $(".set4").show(); $(".set1, .set2, .set3").hide();
+  });
+</script>
+{% endblock %}
+</body>
+</html>

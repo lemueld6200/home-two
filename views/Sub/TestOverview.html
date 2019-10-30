@@ -1,3 +1,16 @@
+<!--- Merge Blog Overview with HideBlog...somehow. An overhaul might be in need.
+ To visualize epikness. 
+Blog, Blog02, Blog03 and Blog04 are being merged under one file called Blog.html
+The page buttons will hide the previous sets and show a set of cards, at this point
+I should probably increase the set of cards per page to around ten, that way the fitler
+that I'm also going to add that comes from BlogOverview be more useful. It's easy to fitler
+five cards, but what about ten? Not hard but tedious.
+
+In addition to this, just to peserve the whole view entry button card in Blog and it's children
+I was thinking of having that view filter shown on load, and the filter controls be hidden on load.
+Clicking the view fitler, obviously hides the button itself, the previous text and shows the button.
+In a ideal world, more would be added to the fitler controls. Maybe one day controlling how many
+sets show up in a page.--->
 {% extends "../default.html" %}
 <html>
   <head>
@@ -11,13 +24,8 @@
 <body> {% block content %} 
 <div class="row">
   <div class="leftcolumn">
-    
-    <div class="card">
-      <h2> Hello there! </h2>
-      <p>  </p>
-    </div>
-    
-    <div class="clickDiv DevChoice Solo card" data-href="/Entry/00.html">
+
+    <div class="clickDiv DevChoice Solo set1 card" data-href="/Entry/00.html">
       <h2> Entry 00: My Website/Portfolio </h2>
       <h5> September 17th, 2019</h5>
       <p> You're looking at it. This website is what I'm working towards perfecting or at least close enough to perfecting. I have so many ideas I wanna make
@@ -25,7 +33,7 @@
       endless possiblities. I'm extremely ambitous on this one and I'm hoping to have this project grow as I grow. </p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/01.html" >
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/01.html" >
       <h2> Entry 01: Binary, Hex and Base 10 Table </h2>
       <h5> September 8th, 2019</h5>
       <p> Simple yet somewhat effective refresher on getting back to coding for Bunin's CS AP class at AFSE. It's been awhile since I touched HTML so 
@@ -33,14 +41,14 @@
       the lesson plan is kinda janked and it isn't at all informative on what Binary/Hex/Ten was, at the beginning of the lesson plan. </p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/02.html">
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/02.html">
       <h2> Entry 02: Technological Innovations </h2>
       <h5> September 15th, 2019</h5>
       <p> Our teacher had us pair in groups and read pre-selected articles on Technological Innovations. Self-driving Automobiles, Swarm Drones
       in Warfare, Pet Robots and Cryptocurrency and summarize what we read. Moments like these make me question what class I'm really in. </p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/03.html">
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/03.html">
       <h2> Entry 03: Plastic Straw Bridge </h2>
       <h5> September 19th, 2019</h5>
       <p> We shall take a moment of silence, to remember all the unnecessary harmful plastic straws that was bought by our teacher
@@ -50,7 +58,7 @@
       of anything else.</p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/04.html">
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/04.html">
       <h2> Entry 04: Array Schedule </h2>
       <h5> September 23rd, 2019</h5>
       <p> Another simple project that I kinda question the point to sometimes nonetheless...it was a Driver and Navigator format, as some of my readers know (hopefully lol) I had a 
@@ -58,7 +66,7 @@
        to making a schedule made of a bunch of arrays. </p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/05.html">
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/05.html">
       <h2> Entry 05: Technological Innovations II </h2>
       <h5> September 24th, 2019</h5>
       <p> We had an option to research from a select four choices of articles that all talk about different computer innovations. I had researched two "interesting" articles 
@@ -66,7 +74,7 @@
       next article because I'm someone who's very concerned over Biometrics. And the poenital for abuse and privacy issues.</p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/06.html">
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/06.html">
       <h2> Entry 06: How a Computer is Set-up </h2>
       <h5> September 27th, 2019</h5>
       <p> Bunin's frequent trouble-shooting problem that his students ask him is..."My computer isn't turning on!" "My screen's black." "I plugged
@@ -74,7 +82,7 @@
       in the computers in the school's lab and plugging them back in shortly after. </p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/07.html">
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/07.html">
       <h2> Entry 07: Spaceship Adventure Processing </h2>
       <h5> October 2nd 2019 </h5>
       <p> Another pair-programming excercise again but with Processing.
@@ -82,7 +90,7 @@
         My program is simply to render that pre-existing sketch in my own written code.  </p>
     </div>
     
-    <div class="clickDiv DevChoice CSAP card" data-href="/Entry/08.html">
+    <div class="clickDiv DevChoice CSAP set1 card" data-href="/Entry/08.html">
       <h2> Entry 08: The Eclipse Super Star Destroyer! </h2>
       <h5> October 7th 2019 </h5>
       <p> In the past two weeks, over in the weekend I booted up Steam and decided to play a select-few of my Steam games I ever played ever. One of those was Empire at War and oh boy, it was
@@ -90,23 +98,84 @@
        content felt unreal too... </p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/09.html">
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/09.html">
       <h2> Entry 09: Arrow Robot on Grid </h2>
       <h5> October 15th 2019</h5>
       <p> Quick Pair Programming excercise, this time we had to make a program that'll be able to solve mazes. There were different levels to this, and each level can be accessed through different means. </p>
     </div>
     
-    <div class="clickDiv CSAP card" data-href="/Entry/10.html">
+    <div class="clickDiv CSAP set1 card" data-href="/Entry/10.html">
       <h2> Entry 10: Binary Converter </h2>
       <h5> October 22nd 2019 </h5>
       <p> Another pair programming excercise, our goal was to make a interactive Binary converter on Scratch based off a pre-existing model provided by the insturctor.  </p>
     </div>
     
-    <div class="clickDiv DevChoice CSAP card" data-href="/Entry/11.html">
+    <div class="clickDiv DevChoice CSAP set2 card" data-href="/Entry/11.html">
       <h2> Entry 11: Hit the Damn Corner! </h2>
       <h5> October 25th 2019 </h5>
       <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
     </div>
+    
+        <div class="clickDiv DevChoice CSAP set2 card" data-href="/Entry/12.html">
+      <h2> Entry 12: Hey there, Doc! </h2>
+      <h5> October 25th 2019 </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
+    <div class="clickDiv DevChoice CSAP set2 card" data-href="/Entry/13.html">
+      <h2> Entry 13: jQuery Filter </h2>
+      <h5>  </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
+    <div class="clickDiv DevChoice CSAP set2 card" data-href="/Entry/14.html">
+      <h2> Entry 14: jQuery Pagination </h2>
+      <h5>  </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
+    <div class="clickDiv DevChoice CSAP set2 card" data-href="/Entry/15.html">
+      <h2> Entry 15: Golden Wolvern </h2>
+      <h5>  </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
+    <div class="clickDiv set2 card" data-href="/Entry/16.html">
+      <h2> Entry 16: Yatogami </h2>
+      <h5>  </h5>
+      <p> Another pair programming excercise, our goal was to make a interactive Binary converter on Scratch based off a pre-existing model provided by the insturctor.  </p>
+    </div>
+    
+    <div class="clickDiv set2 card" data-href="/Entry/17.html">
+      <h2> Entry 17: Stitch </h2>
+      <h5>  </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
+        <div class="clickDiv set2 card" data-href="/Entry/18.html">
+      <h2> Entry 18: Joker </h2>
+      <h5> October 25th 2019 </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
+    <div class="clickDiv DevChoice CSAP set2 card" data-href="/Entry/19.html">
+      <h2> Entry 19: Stormuari </h2>
+      <h5>  </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
+    <div class="clickDiv DevChoice CSAP set2 card" data-href="/Entry/20.html">
+      <h2> Entry 20: </h2>
+      <h5> </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
+    <div class="clickDiv DevChoice CSAP set3 card" data-href="/Entry/21.html">
+      <h2> Entry 21: </h2>
+      <h5> </h5>
+      <p> A small-quick program in Scratch of a DVD screensaver, and two people complaining endlessly about their pain and their need for the DVD to hit the corner. </p>
+    </div>
+    
   </div>
   
   <div class="rightcolumn">  
@@ -116,11 +185,23 @@
       <a class="btn SoloFilter"      href="javascript:alert('Pet Projects tagged Entries have been elimnated!');">       Personal Pet Projects </a>
       <a class="btn DevChoiceFilter" href="javascript:alert('Developer's Choice tagged Entries have been elimnated!');"> Developer's Choice    </a>
       <a class="btn PublishedFilter" href="javascript:alert('Published Projects tagged Entries have been elimnated!');"> Published Projects    </a>
+      
+    <div class="pagination">
+  <a> &laquo; </a>
+  <a class="nextSetBtn" >1</a>
+  <a class="nextSetBtn2">2</a> 
+  <a class="nextSetBtn3">3</a> 
+  <a class="nextSetBtn4">4</a>
+  <a> &raquo; </a>
+</div>
+
     </div> 
+    
     <div class="card">
       <h3> Project Post </h3>
        <p> (Placeholder): Something something, for a project. </p>
     </div>
+    
     <div class="card">
       <h3>Twitter Activity</h3>
       <blockquote class="twitter-tweet" data-lang="en"><p lang="ca" dir="ltr">Hi I exist</p>&mdash; theycallmemarana (@MaranaHimself) <a href="https://twitter.com/MaranaHimself/status/1161627324548358144?ref_src=twsrc%5Etfw">August 14, 2019</a></blockquote>
@@ -128,15 +209,19 @@
     </div>
   </div>
 </div>
+<div class="pagination">
+  <a> &laquo; </a>
+  <a class="nextSetBtn" >1</a>
+  <a class="nextSetBtn2">2</a> 
+  <a class="nextSetBtn3">3</a> 
+  <a class="nextSetBtn4">4</a>
+  <a> &raquo; </a>
+</div>
 
   <!--- Entry Classes: Intro to CS (AFSE 2018/2019), CS AP (AFSE 2019/2020), Personal/Solo, Developer's Choice, Published --->
                    <!--- "IDs"/Classes: "IntroCS" "CSAP" "Solo" "DevChoice" "Published" --->
 <script>     
-  
-   /* Clickable Div(s) *//* ClickDiv */
-  $(".clickDiv").click(function(){
-    
-  
+
     /* Intro to Computer Science */
   $(document).ready(function(){
   $(".IntroCSFilter").click(function(){
@@ -165,17 +250,41 @@
     $(".DevChoice").toggle();
   });
   
-  /* JQUERY COMMENTARY:
-  Oh my god, it finally works. Below is a template of what I originally did that got it working.
-  For the button you have to make sure it has whatever class is in the second line and for what you want
-  hidden to have the class in the third line. You can change toggle to hide or show. Toggle hides AND shows, hide is hidden until it is
-  shown by a seperate "function" and same goes for show but by default is should be shown so pretty useless in that case.
+    /* All Hands on Deck! Default Settings onload! I'm so proud of myself, this script is fully mine, yay. */
+$(document).ready(function(){
+ $(".nextSetBtn").addClass("active"); 
+  $(".set2, .set3, .set4").hide() 
+   $(".set1").show() 
+});
   
-  $(document).ready(function(){
-  $(".SoloFilter").click(function(){
-    $(".Solo").toggle();
+  
+  /* Page 1 */
+  $(".nextSetBtn").click(function(){
+   $(".nextSetBtn").addClass("active"); 
+    $(".nextSetBtn2, .nextSetBtn3, .nextSetBtn4").removeClass("active");
+     $(".set1").show(); $(".set2, .set3, .set4").hide();
   });
-  */
+  
+  /* Page 2 */
+  $(".nextSetBtn2").click(function(){
+   $(".nextSetBtn2").addClass("active"); 
+    $(".nextSetBtn, .nextSetBtn3, .nextSetBtn4").removeClass("active");
+     $(".set2").show(); $(".set1, .set3, .set4").hide();
+  });
+  
+  /* Page 3 */
+  $(".nextSetBtn3").click(function(){
+   $(".nextSetBtn3").addClass("active"); 
+    $(".nextSetBtn, .nextSetBtn2, .nextSetBtn4").removeClass("active");
+     $(".set3").show(); $(".set1, .set2, .set4").hide();
+  });
+    
+  /* Page 4 */
+  $(".nextSetBtn4").click(function(){
+   $(".nextSetBtn4").addClass("active"); 
+    $(".nextSetBtn, .nextSetBtn2, .nextSetBtn3").removeClass("active");
+     $(".set4").show(); $(".set1, .set2, .set3").hide();
+  });
 }); 
   
 </script> 

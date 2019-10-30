@@ -1,9 +1,5 @@
 ## Hello there!
 
-#### \* Slide Number on Portfolio
-
-Looking at the header on Portfolio.html, there's a slightly visible 2/6 hiding. It belongs, well used to, to the slideshow that was gonna be on Portfolio.
-
 #### \* 404
 
 For whatever reason, 404 page doesn't show up but rather the redirected too many times page. And for whatever reason Main/Home.html and it's brothers isn't
