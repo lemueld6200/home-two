@@ -1,8 +1,10 @@
-if (location.protocol === "http:") location.protocol = "https:";
+// if (window.location.protocol === "http:") window.location.protocol = "https:";
 
 $(() => {
-   /* Clickable Div(s) *//* ClickDiv */
-  $(".clickDiv").click(function(){
-    location.href = $(this).attr("data-href");
+  /* Lemuel's clickDiv Code (i.e NOT MINES) */
+  $(".clickDiv").each(function(i) {
+    const div = $(this);
+    div.attr("tabindex", i);
+    div.click(() => (window.location.href = div.attr("data-href")));
   });
 });

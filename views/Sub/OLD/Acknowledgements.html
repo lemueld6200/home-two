@@ -1,41 +1,45 @@
 {% extends "../default.html" %}
 <html>
- <head>
-  <title> {% block title %} Contact Me {% endblock %} </title> {% block head %}
-  <link rel="stylesheet" type="text/css" href="/css/Entry Style.css" /> {% endblock %}
- </head>
-<body> {% block content %}
- <div class="row">
-  <div class="leftcolumn">
-   <div class="card">
-    <h2> Acknowledgements </h2>
-  <p align="left"> <b> Thanks for... </b></p>
-  <p align="left"> </p>
-  <p align="left"> </p>
+  <head>
+    <title> {% block title %} Contact Me {% endblock %} </title>
+
+    {% block head %}
+    <link rel = "stylesheet" type = "text/css" href = "/css/Entry Style.css" />
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div class = "row">
+      <div class = "leftcolumn">
+        <div class = "card">
+          <h2> Acknowledgements </h2>
+          <p> <b> Thanks for... </b></p>
+          <p> </p>
+          <p> </p>
 
           <p> </p>
-          <br/><br/><br/><br/>
+          <br /><br /><br /><br />
         </div>
       </div>
 
-  <div class="rightcolumn">
-    <div class="card">
-      <h2></h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <br>
-      <a href="mailto:firstincommand111@gmail.com">Email Me</a>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <p>
-        Why, hello there!
-      </p>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-  </div>{% endblock %}
-</body>
+      <div class = "rightcolumn">
+        <div class = "card">
+          <h2></h2>
+          <div class = "fakeimg" style = "height:100px;">Image</div>
+          <br />
+          <a href = "mailto:firstincommand111@gmail.com">Email Me</a>
+        </div>
+        <div class = "card">
+          <h3>Popular Post</h3>
+          <p>
+            Why, hello there!
+          </p>
+        </div>
+        <div class = "card">
+          <h3>Follow Me</h3>
+          <p>Some text..</p>
+        </div>
+      </div> </div
+    >{% endblock %}
+  </body>
 </html>

@@ -21,7 +21,7 @@ An observation on the progress tag, for some reason, whatever reason...
 `<progress value="22" max="100"> </progress>`
 Gives me a _static_ progress bar and works as I intended, however before doing this...
 I originally did `<progress> min"0" max="100" value ="1" </progress>` gives me an ANIMATED progress bar and doesn't adhere to the parameters (seemingly)
-Notice where the ">" is located in the first part of the tag? No clue why it goes animated if you put `<progress>` then `<progress (paramaters)>`
+Notice where the ">" is located in the first part of the tag? No clue why it goes animated if you put `<progress>` then `<progress (parameters)>`
 But hey! Bet it'll be useful...one day...or something.
 
 ## Planned Entries

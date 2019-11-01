@@ -1,0 +1,112 @@
+<!--- Functionality to add...
+Project Post (randomly chooses random project listings) a small banner on the right column -->
+{% extends "../default.html" %}
+<html>
+  <head>
+    <title> {% block title %} Blog Overview {% endblock %} </title> {% block head %}
+    <link rel="stylesheet" type="text/css" href="/css/SubcoreJBStyle.css"/> {% endblock %}
+  </head>
+  <body>
+  {% block content %} 
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="clickDiv set1 card" data-href="/Entry/00.html">
+          <h2> 00</h2>
+        </div>
+        
+        <div class="clickDiv set2 card" data-href="/Entry/11.html">
+          <h2> Entry 11:</h2>
+        </div>
+        
+        <div class="clickDiv set3 card" data-href="/Entry/21.html">
+          <h2> Entry 21: </h2>
+        </div>
+        
+      </div>
+      
+      <div class="rightcolumn">  
+        <div class="card">
+          <h3> Project Post </h3>
+          <p> (Placeholder): Something something, for a project. </p>
+        </div>
+      </div>
+    </div>
+      
+    <script>     
+      
+      /* Visualization: OSososoowowoosowoosowoowowow
+      I want to create a function that'll be called on load, that'll randomly select an existing project and display it in
+      the right column. It should randomize everytime it is loaded. 
+      
+      To do this, you'd need a document.ready function that'll
+      roll the dice. Whatever value it falls on, it should match an array listing that contains the pre-made Div.
+      The set of Divs hopefully you can learn this, would be to make an html of every possible Project Post Div, and have it extend.
+      
+      Once selected, a function should be called that'll display the Div. And viola. Goodluck making something that'll take you
+      away fifty hours of sleep. */
+      
+      /* How can we get a value from the randomNumber function, to correspond to an element in a Array? Ideals obviously, 
+      if the value is one, Option A would be picked. If the value was six, Option F would be picked. And so on. */
+      /* While my forum post gets answered, I should do the rest of the script to save time.
+      After grabbing a randomized element
+      randomized Element should correspond to a class?*/ 
+
+      /* OLD CODE FOR RANDOM THING
+      $(document).ready(function(){
+        var randomNumb = randomNumber();
+        var ChosenOne = divOptions[randomNumb];
+        console.log(ChosenOne);
+      });
+      
+      function randomNumber(){
+        var randomNumb = Math.floor((Math.random() * divOptions.length) + 1)
+        return randomNumb; // Grabs a random number, using the amount of elements in the divOptions array as it's max.
+      }
+      
+      var divOptions = new Array();
+      divOptions[0] = "Option A";
+      divOptions[1] = "Option B";
+      divOptions[2] = "Option C"; 
+      divOptions[3] = "Option D";
+      divOptions[4] = "Option E";
+      divOptions[5] = "Option F";
+      divOptions[6] = "Option G"; 
+      divOptions[7] = "Option H";
+      
+      var divOptLength = divOptions.length; // Maybe I won't need that variable
+      */
+
+      /* Actually on further thought doing it this way may be helpful-er...
+      Once the document loads, a function that will summon a random number
+      That number will be the length of the amount of laid out classes.
+      
+      If number is one then a function will be executed
+      if x = 1 then display Option A
+      
+      If number is three then a function will be exethree
+      if x = 3 then display option C.
+      
+      Probably way more effective in terms of time.
+      Since that earlier visualization requires Big Boy Brainpower. */ 
+
+
+      /**
+      * New Code for random thingy
+      */
+      $(() => {
+        const divOptions = ["Option A",
+          "Option B",
+          "Option C",
+          "Option D",
+          "Option E",
+          "Option F",
+          "Option G",
+          "Option H"
+        ];
+        const ChosenOne = divOptions[Math.floor(Math.random() * divOptions.length)];
+        alert(ChosenOne);
+      });
+    </script> 
+    {% endblock %}
+  </body>
+</html>

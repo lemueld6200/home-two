@@ -1,126 +1,135 @@
 {% extends "layout.html" %}
+
 <html>
   <head>
     <title> {% block title %} The Indexer {% endblock %} </title>
+
     {% block head %}
-    <style>
-      body {
-        background: #0f0e0e;
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .header {
-        padding: 20px;
-        text-align: center;
-        background: #0f0e0e;
-        color: white;
-      }
-      .header h1 {
-        font-size: 40px;
-      }
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #212020;
-      }
-      li {
-        float: left;
-      }
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 15px 87.3px;
-        text-decoration: none;
-      }
-      li a:hover {
-        background-color: #111;
-      }
-      .active {
-        background-color: #0967c8;
-      }
-      .footer {
-        left: 0;
-        bottom: 0;
-        width: 95%;
-        background-color: #0f0e0e;
-        color: white;
-        text-align: center;
-      }
-    </style>
+      <style>
+        body {
+          background: #0f0e0e;
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .header {
+          padding: 20px;
+          text-align: center;
+          background: #0f0e0e;
+          color: white;
+        }
+        .header h1 {
+          font-size: 40px;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #212020;
+        }
+        li {
+          float: left;
+        }
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 15px 87.3px;
+          text-decoration: none;
+        }
+        li a:hover {
+          background-color: #111;
+        }
+        .active {
+          background-color: #0967c8;
+        }
+        .footer {
+          left: 0;
+          bottom: 0;
+          width: 95%;
+          background-color: #0f0e0e;
+          color: white;
+          text-align: center;
+        }
+      </style>
     {% endblock %}
   </head>
   <body>
     {% block body %}
-    <div class="header">
-      <h1> Hello there! </h1>
-       <p> Welcome to the Indexer (and my website I guess) </p>
-    </div>
-     <div class="footer" style="padding-left: 50px; padding-right: 20px">
-      <p> Because everything takes time and I'm learning more as I go along. For now, the website's navigation will be here. If you want to go to let's say Entry 06 
-      you'd have to go through this list of complied entries and available pages. This does not in any way represent the final version of the website. Most of the 
-      website should be ready to drop jaws (or at least I hope) by May. Until then this will be your main navigation around the site. </p>
-       
-      <hr size="2"/> <br/>
-      <h4>Available Core Pages:</h4>
-      <ul>
-        <li><a href="javascript:alert('Youre already here :P');" class="active"> The Indexer </a> </li>
-        <li><a href="/Main/About.html"> About </a></li>
-        <li><a href="/Main/Home.html">  Home  </a></li>
-        <li><a href="/Main/Portfolio.html"> Portfolio </a></li>
-      </ul> 
+      <header class = "header">
+        <h1> Hello there! </h1>
+        <p> Welcome to the Indexer (and my website I guess) </p>
+      </header>
+      <footer class = "footer" style = "padding-left: 50px; padding-right: 20px">
+        <p>
+          Because everything takes time and I'm learning more as I go along. For now, the website's
+          navigation will be here. If you want to go to let's say Entry 06 you'd have to go through
+          this list of complied entries and available pages. This does not in any way represent the
+          final version of the website. Most of the website should be ready to drop jaws (or at least
+          I hope) by May. Until then this will be your main navigation around the site.
+        </p>
 
-      <hr size="2"/> <br/>
-      <h4>Available Sub-Core Pages:</h4>
-      <ul>
-        <li><a href="/Sub/BlogOverview.html"> Home - JB Overview  </a></li>
-        <li><a href="/Sub/UpdateLog.html"> Home - Update Log      </a></li>
-        <li><a href="/Sub/Blog.html"> Home - Journal              </a></li>
-        <li><a href="/Sub/Blog02.html"> Home - Journal II         </a></li>
-        <li><a href="/Sub/Blog03.html"> Home - Journal III        </a></li>
-        <li><a href="/Sub/JBPortalOld.html"> Home - Old Portal    </a></li>
-        <li><a href="/Sub/JBPortalNew.html"> Home - New Portal    </a></li>
-      </ul>
+        <hr /> <br />
+        <h4>Available Core Pages:</h4>
+        <ul>
+          <li
+            ><a href = "javascript: alert('Youre already here :P');" class = "active"> The Indexer </a>
+          </li>
+          <li><a href = "/Main/About"> About </a></li>
+          <li><a href = "/Main/Home"> Home </a></li>
+          <li><a href = "/Main/Portfolio"> Portfolio </a></li>
+        </ul>
 
-      <hr size="2"/> <br/>
-      <h4>Available Misc/Dev/Broken Pages:</h4>
-      <ul>
-        <li><a href="/Update/2019-09.html"> September </a></li>
-        <li><a href="/Update/2019-10.html"> October </a></li>
-      </ul>
-      <hr size="2"/> <br/>
-      <h4>Available Entries:</h4>
-      <ul>
-        <li><a href="/Entry/00.html"> Entry 00 </a></li>
-        <li><a href="/Entry/01.html"> Entry 01 </a></li>
-        <li><a href="/Entry/02.html"> Entry 02 </a></li>
-        <li><a href="/Entry/03.html"> Entry 03 </a></li>
-        <li><a href="/Entry/04.html"> Entry 04 </a></li>
-        <li><a href="/Entry/05.html"> Entry 05 </a></li>
-        <li><a href="/Entry/06.html"> Entry 06 </a></li>
-        <li><a href="/Entry/07.html"> Entry 07 </a></li>
-        <li><a href="/Entry/08.html"> Entry 08 </a></li>
-        <li><a href="/Entry/09.html"> Entry 09 </a></li>
-        <li><a href="/Entry/10.html"> Entry 10 </a></li>
-        <li><a href="/Entry/11.html"> Entry 11 </a></li>
-        <li><a href="/Entry/12.html"> Entry 12 </a></li>
-        <li><a href="/Entry/13.html"> Entry 13 </a></li>
-        <li><a href="/Entry/14.html"> Entry 14 </a></li>
-        <li><a href="/Entry/15.html"> Entry 15 </a></li>
-      </ul>
-      <br/> <br/>
-      <hr size="2"/>
-      <br/>
-      <center class="thanks"> Acknowledgements: <br/>
-        Huge thanks to the writers and coders over at W3Schools for there insightful examples And organized tutorials. While a good big chunk of it is my code, some sections 
-        with borrowed code are properly acknowledged in it's own page in About (coming soon). As well as the various people who helped me get to this point. 
-        (i.e concept artists, mentors etc.)
-      </center>
-    </div>
+        <hr /> <br />
+        <h4>Available Sub-Core Pages:</h4>
+        <ul>
+          <li><a href = "/Sub/BlogOverview"> Home - JB Overview </a></li>
+          <li><a href = "/Sub/UpdateLog"> Home - Update Log </a></li>
+          <li><a href = "/Sub/Blog"> Home - Journal </a></li>
+          <li><a href = "/Sub/Blog02"> Home - Journal II </a></li>
+          <li><a href = "/Sub/Blog03"> Home - Journal III </a></li>
+          <li><a href = "/Sub/JBPortalOld"> Home - Old Portal </a></li>
+          <li><a href = "/Sub/JBPortalNew"> Home - New Portal </a></li>
+        </ul>
+
+        <hr /> <br />
+        <h4>Available Misc/Dev/Broken Pages:</h4>
+        <ul>
+          <li><a href = "/Update/2019-09"> September </a></li>
+          <li><a href = "/Update/2019-10"> October </a></li>
+        </ul>
+        <hr /> <br />
+        <h4>Available Entries:</h4>
+        <ul>
+          <li><a href = "/Entry/00"> Entry 00 </a></li>
+          <li><a href = "/Entry/01"> Entry 01 </a></li>
+          <li><a href = "/Entry/02"> Entry 02 </a></li>
+          <li><a href = "/Entry/03"> Entry 03 </a></li>
+          <li><a href = "/Entry/04"> Entry 04 </a></li>
+          <li><a href = "/Entry/05"> Entry 05 </a></li>
+          <li><a href = "/Entry/06"> Entry 06 </a></li>
+          <li><a href = "/Entry/07"> Entry 07 </a></li>
+          <li><a href = "/Entry/08"> Entry 08 </a></li>
+          <li><a href = "/Entry/09"> Entry 09 </a></li>
+          <li><a href = "/Entry/10"> Entry 10 </a></li>
+          <li><a href = "/Entry/11"> Entry 11 </a></li>
+          <li><a href = "/Entry/12"> Entry 12 </a></li>
+          <li><a href = "/Entry/13"> Entry 13 </a></li>
+          <li><a href = "/Entry/14"> Entry 14 </a></li>
+          <li><a href = "/Entry/15"> Entry 15 </a></li>
+        </ul>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <p class = "thanks">
+          Acknowledgements: <br />
+          Huge thanks to the writers and coders over at W3Schools for there insightful examples And
+          organized tutorials. While a good big chunk of it is my code, some sections with borrowed
+          code are properly acknowledged in it's own page in About (coming soon). As well as the
+          various people who helped me get to this point. (i.e concept artists, mentors etc.)
+        </p>
+      </footer>
     {% endblock %}
   </body>
 </html>
-
-

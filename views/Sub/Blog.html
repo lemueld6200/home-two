@@ -2,101 +2,129 @@
 <html>
   <head>
     <title> {% block title %} Blog {% endblock %} </title>
+
     {% block head %}
-    <link rel="stylesheet" type="text/css" href="/css/SubcoreJBStyle.css"/>
-    <script src="https://code.jquery.com/jquery-3.1.1.js"> </script>
-    <script src="/js/Basic Functionality.js"> </script> 
+    <link rel = "stylesheet" type = "text/css" href = "/css/SubcoreJBStyle.css" />
+    <script src = "https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src = "/js/Basic Functionality.js"></script>
     {% endblock %}
   </head>
-<body> {% block content %}
-<div class="row">
-  <div class="leftcolumn">
-    
-    <div class="clickDiv DevChoice Solo card" data-href="/Entry/00.html">
-      <h2> My Website/Portfolio </h2>
-      <h5> September 17th, 2019 </h5>
-      <p> You're looking at it. This website is what I'm working towards perfecting or at least close enough to perfecting. I have so many ideas I wanna make
-      I'm planning on even buying a proper domain name for this eventually once I'm on my own two feet eventually. It's the kind of project that hooks me on because of the
-      endless possiblities. I'm extremely ambitous on this one and I'm hoping to have this project grow as I grow. </p>
+  <body>
+    {% block content %}
+    <div class = "row">
+      <div class = "leftcolumn">
+        <div class = "clickDiv DevChoice Solo card" data-href = "/Entry/00">
+          <h2> My Website/Portfolio </h2>
+          <h5> September 17th, 2019 </h5>
+          <p>
+            You're looking at it. This website is what I'm working towards perfecting or at least
+            close enough to perfecting. I have so many ideas I wanna make I'm planning on even
+            buying a proper domain name for this eventually once I'm on my own two feet eventually.
+            It's the kind of project that hooks me on because of the endless possiblities. I'm
+            extremely ambitous on this one and I'm hoping to have this project grow as I grow.
+          </p>
+        </div>
+
+        <div class = "clickDiv CSAP card" data-href = "/Entry/01">
+          <h2> Binary, Hex and Base 10 Table </h2>
+          <h5> September 8th, 2019 </h5>
+          <p>
+            Simple yet somewhat effective refresher on getting back to coding for Bunin's CS AP
+            class at AFSE. It's been awhile since I touched HTML so it was a welcomed project.
+            Though nothing accelerating or really something to write home about. We were somewhat
+            introduced to number systems, though honestly the lesson plan is kinda janked and it
+            isn't at all informative on what Binary/Hex/Ten was, at the beginning of the lesson
+            plan.
+          </p>
+        </div>
+
+        <div class = "clickDiv CSAP card" data-href = "/Entry/02">
+          <h2> Technological Innovations </h2>
+          <h5> September 15th, 2019 </h5>
+          <p>
+            Our teacher had us pair in groups and read pre-selected articles on Technological
+            Innovations. Self-driving Automobiles, Swarm Drones in Warfare, Pet Robots and
+            Cryptocurrency and summarize what we read. Moments like these make me question what
+            class I'm really in.
+          </p>
+        </div>
+
+        <div class = "clickDiv CSAP card" data-href = "/Entry/03">
+          <h2> Plastic Straw Bridge </h2>
+          <h5> September 19th, 2019 </h5>
+          <p>
+            We shall take a moment of silence, to remember all the unnecessary harmful plastic
+            straws that was bought by our teacher that have made their way into the ocean and
+            polluted our great waters. Rest in peace sea-life. Even though this is a "computer
+            science class" our teacher had us make the longest straw bridge possible out
+            of...plastic straws. The fact this even got approved is questionable, this has in my
+            opinion little to do with actual coding. I guess this activity was planned to encourage
+            teamwork and communication? Can't think of anything else.</p
+          >
+        </div>
+
+        <div class = "clickDiv CSAP card" data-href = "/Entry/04">
+          <h2> Array Schedule </h2>
+          <h5> September 23rd, 2019 </h5>
+          <p>
+            Another simple project that I kinda question the point to sometimes nonetheless...it was
+            a Driver and Navigator format, as some of my readers know (hopefully lol) I had a a
+            similar experience back to the "first" entry
+            <a href = "Entry01"> Binary, Hex and Base 10 Table </a>. For this project we were told to
+            do a Driver-Navigator approach to making a schedule made of a bunch of arrays.
+          </p>
+        </div>
+
+        <div class = "clickDiv CSAP card" data-href = "/Entry/05">
+          <h2> Technological Innovations II </h2>
+          <h5> September 24th, 2019 </h5>
+          <p>
+            We had an option to research from a select four choices of articles that all talk about
+            different computer innovations. I had researched two "interesting" articles that has
+            been laid out for me and my class. I chose Augmented Reality because I am very well
+            interested in how AR will impact the future, and I chose Biometrics for the next article
+            because I'm someone who's very concerned over Biometrics. And the poenital for abuse and
+            privacy issues.</p
+          >
+        </div>
+      </div>
+
+      <div class = "rightcolumn">
+        <div class = "card">
+          <h3> Welcome to My Blog </h3>
+          <p>
+            Here you'll find commentary on various projects and assignments. This is more of a way
+            to document my journey into CS.</p
+          >
+          <a class = "btn" href = "/Sub/BlogOverview"> View All Entries </a>
+        </div>
+
+        <div class = "clickDiv card" data-href = "/Projects/Stitch Mordex">
+          <h3> Project Example </h3>
+          <p> </p>
+        </div>
+
+        <div class = "card">
+          <h3>Twitter Activity</h3>
+          <blockquote class = "twitter-tweet" data-lang = "en">
+            <p lang = "ca" dir = "ltr">Hi I exist</p>&mdash; theycallmemarana (@MaranaHimself)
+            <a
+              href = "https://twitter.com/MaranaHimself/status/1161627324548358144?ref_src=twsrc%5Etfw"
+              >August 14, 2019</a
+            >
+          </blockquote>
+          <script async src = "https://platform.twitter.com/widgets.js" charset = "utf-8"></script>
+        </div>
+      </div>
     </div>
-    
-    <div class="clickDiv CSAP card" data-href="/Entry/01.html">
-      <h2> Binary, Hex and Base 10 Table </h2>
-      <h5> September 8th, 2019 </h5>
-      <p> Simple yet somewhat effective refresher on getting back to coding for Bunin's CS AP class at AFSE. It's been awhile since I touched HTML so 
-      it was a welcomed project. Though nothing accelerating or really something to write home about. We were somewhat introduced to number systems, though honestly
-      the lesson plan is kinda janked and it isn't at all informative on what Binary/Hex/Ten was, at the beginning of the lesson plan. </p>
+    <div class = "pagination">
+      <a href = "/Sub/JBPortalOld">&laquo;</a>
+      <a class = "active" href = "#">1</a>
+      <a href = "/Sub/Blog02">2</a>
+      <a href = "/Sub/Blog03">3</a>
+      <a href = "/Sub/Blog04">4</a>
+      <a href = "/Sub/JBPortalNew">&raquo;</a>
     </div>
-    
-    <div class="clickDiv CSAP card" data-href="/Entry/02.html">
-      <h2> Technological Innovations </h2>
-      <h5> September 15th, 2019 </h5>
-      <p> Our teacher had us pair in groups and read pre-selected articles on Technological Innovations. Self-driving Automobiles, Swarm Drones
-      in Warfare, Pet Robots and Cryptocurrency and summarize what we read. Moments like these make me question what class I'm really in. </p>
-    </div>
-    
-    <div class="clickDiv CSAP card" data-href="/Entry/03.html">
-      <h2> Plastic Straw Bridge </h2>
-      <h5> September 19th, 2019 </h5>
-      <p> We shall take a moment of silence, to remember all the unnecessary harmful plastic straws that was bought by our teacher
-      that have made their way into the ocean and polluted our great waters. Rest in peace sea-life. Even though this is a "computer science class"
-      our teacher had us make the longest straw bridge possible out of...plastic straws. The fact this even got approved is questionable, this 
-      has in my opinion little to do with actual coding. I guess this activity was planned to encourage teamwork and communication? Can't think 
-      of anything else.</p>
-    </div>
-    
-    <div class="clickDiv CSAP card" data-href="/Entry/04.html">
-      <h2> Array Schedule </h2>
-      <h5> September 23rd, 2019 </h5>
-      <p> Another simple project that I kinda question the point to sometimes nonetheless...it was a Driver and Navigator format, as some of my readers know (hopefully lol) I had a 
-       a similar experience back to the "first" entry <a href="Entry01.html"> Binary, Hex and Base 10 Table </a>. For this project we were told to do a Driver-Navigator approach
-       to making a schedule made of a bunch of arrays. </p>
-    </div>
-    
-    <div class="clickDiv CSAP card" data-href="/Entry/05.html">
-      <h2> Technological Innovations II </h2>
-      <h5> September 24th, 2019 </h5>
-      <p> We had an option to research from a select four choices of articles that all talk about different computer innovations. I had researched two "interesting" articles 
-      that has been laid out for me and my class. I chose Augmented Reality because I am very well interested in how AR will impact the future, and I chose Biometrics for the
-      next article because I'm someone who's very concerned over Biometrics. And the poenital for abuse and privacy issues.</p>
-    </div>
-  </div>
-  
-  <div class="rightcolumn">  
-    <div class="card">
-     <h3> Welcome to My Blog </h3>
-      <p> Here you'll find commentary on various projects and assignments. This is more of a way to document my journey into CS.</p>
-      <a class="btn" href="/Sub/BlogOverview.html"> View All Entries </a>
-    </div> 
-    
-    <div class="clickDiv card" data-href="/Projects/Stitch Mordex.html">
-      <h3> Project Example </h3>
-       <p>  </p>
-    </div>
-    
-    <div class="card">
-      <h3>Twitter Activity</h3>
-      <blockquote class="twitter-tweet" data-lang="en">
-       <p lang="ca" dir="ltr">Hi I exist</p>&mdash; theycallmemarana (@MaranaHimself) 
-        <a href="https://twitter.com/MaranaHimself/status/1161627324548358144?ref_src=twsrc%5Etfw">August 14, 2019</a>
-      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-  </div>
-</div>
-<div class="pagination">
-  <a href="/Sub/JBPortalOld.html">&laquo;</a>
-  <a class="active" href="#">1</a>
-  <a href="/Sub/Blog02.html">2</a> 
-  <a href="/Sub/Blog03.html">3</a> 
-  <a href="/Sub/Blog04.html">4</a>
-  <a href="/Sub/JBPortalNew.html">&raquo;</a>
-</div>
-<script>
- /* Clickable Div(s) *//* ClickDiv */
-  $(".clickDiv").click(function(){
-    location.href = $(this).attr("data-href");
-  });
-</script>
-{% endblock %}
-</body>
+    {% endblock %}
+  </body>
 </html>

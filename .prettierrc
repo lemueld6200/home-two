@@ -1,0 +1,12 @@
+{
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "strict",
+  "semi": true,
+  "singleQuote": false,
+  "useTabs": false,
+  "tabWidth": 2,
+  "requirePragma": true,
+  "printWidth": 100,
+  "trailingComma": "none"
+}

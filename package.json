@@ -4,11 +4,13 @@
   "description": "Hello there?",
   "main": "server.js",
   "author": "Oswaldo De Los Santos",
+  "homepage": "https://home-one.glitch.me",
   "scripts": {
-    "start": "nodemon server"
+    "start": "nodemon ./server/server.js --watch ."
   },
   "dependencies": {
     "dotenv": "^8.1.0",
+    "http": "0.0.0",
     "koa": "^2.10.0",
     "koa-body": "^4.1.1",
     "koa-logger": "^3.2.1",
@@ -18,7 +20,14 @@
     "swig": "^1.4.2"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^1.19.3",
+    "swig": "^1.4.2"
   },
   "keywords": [
     "afse",

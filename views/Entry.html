@@ -2,21 +2,25 @@
 
 <html>
   <head>
-    <title>{% block title %} Entry {% endblock %}</title>
+    <title> {% block title %} Entry {% endblock %} </title>
+    
     {% block head %}
-    <link rel="stylesheet" type="text/css" href="/css/Entry Style.css" />
+      <link rel = "stylesheet" type = "text/css" href = "/css/Entry Style.css" />
     {% endblock %}
   </head>
   <body>
     {% block content %}
-    <div class="row">
-      <div class="leftcolumn">
-        <div class="card">
-          {% block post %} <strong><em>*GASP*</em></strong> this place is forbidden!? {% endblock %}
+      <div class = "row">
+        <div class = "leftcolumn">
+          <div class = "card">
+            {% block post %}
+              <strong> Missing POST! </strong>
+            {% endblock %}
 
-          <br/><br/><br/>
+            <br /><br /><br />
+          </div>
         </div>
       </div>
-    </div> {% endblock %}
+    {% endblock %}
   </body>
 </html>

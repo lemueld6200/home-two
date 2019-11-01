@@ -1,11 +1,14 @@
-void setup(){  
-  size(1800,1000); fill(0,0,255);
+void setup() {
+  size(1800,1000);
+  fill(0,0,255);
   boolean dev   = false;
   boolean info  = false;
 } 
 
-void draw(){ noStroke();
-  background(255,255,255);  fill(20,20,20);
+void draw() {
+  noStroke();
+  background(255,255,255);
+  fill(20,20,20);
 
 
   //Top Hull

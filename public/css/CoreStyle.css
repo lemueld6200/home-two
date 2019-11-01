@@ -125,10 +125,9 @@ body {
   font-size: 50px;
 }
 
-
 /*Dropdown */
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -179,7 +178,6 @@ body {
   background-color: #ddd;
   color: black;
 }
-
 
 /* "Basics" */
 p {
@@ -233,16 +231,25 @@ p {
 }
 
 /* Portfolio Project Overview */
-.overview { display: flex; flex-warp: row wrap; justify-content: center; align-items: center; height: 60%; }
+.overview {
+  display: flex;
+  flex-warp: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
 .overview > div img {
-   /*grow*/ text-align: center;  
+  /*grow*/
+  text-align: center;
 }
 .arrowTransition {
   background-color: white;
   padding: 0px 50% 20px 49.5%;
-  margin-top: 20px;}
-.overviewContent { display: }
-
+  margin-top: 20px;
+}
+.overviewContent {
+  display: ;
+}
 
 /* Quote */
 .quote {
@@ -276,9 +283,15 @@ p {
 }
 
 /* Progress Bar */
-.quotebox progress { margin-left: 50px; }
-.quotebox h3 { margin-left: 50px; }
-.quotebox p { margin-left: 30px; }
+.quotebox progress {
+  margin-left: 50px;
+}
+.quotebox h3 {
+  margin-left: 50px;
+}
+.quotebox p {
+  margin-left: 30px;
+}
 
 /* Other Screens */
 @media (max-width: 500px) {
@@ -304,4 +317,7 @@ p {
     width: 100%;
   }
 }
-iframe {width: 100%; overflow: hidden}
+iframe {
+  width: 100%;
+  overflow: hidden;
+}

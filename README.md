@@ -64,8 +64,8 @@ The server file can be found in `/server.js`(obviously). This server runs using 
 
 ### Documentation for dependencies used
 
-- Koa <https://koajs.com/>
-- Swig <https://node-swig.github.io/swig-templates/>
+- Koa <https://devdocs.io/koa/>
+- Swig <https://node-swig.github.io/swig-templates/docs/>
 
 ---
 

@@ -1,39 +1,78 @@
-<!DOCTYPE html> <!--- Default 404 Page ---> 
-<html lang="en">
+{% extends "layout.html" %}
+
+<!-- Default 404 Page -->
+<html lang = "en">
   <head>
-    <title> {% block title %} 404 - You don't Exist. {% endblock %} </title> {% block head %}
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-      body { font-family: Arial, Helvetica, sans-serif; margin: 0; }
-      p { color: white; }
-      .header { padding: 20px; text-align: center; background: #0F0E0E; color: white; }
-      .header h1 { font-size: 40px; }
-      .Retreat a { padding-top: 30px; padding-bottom: 30px; display: block; color: white;
-       text-align: center; width: 100%; text-decoration: none;}
-      .Retreat a:hover { background-color: #111; } .active { background-color: #0967C8; }
-      .center {padding-right: 40px; padding-left: 40px}
-  </style> {% endblock %}
+    <title> {% block title %} 404 - You don't Exist. {% endblock %} </title>
+
+    {% block head %}
+      <style>
+        body {
+          background: #0f0e0e;
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+        p {
+          color: white;
+        }
+        .header {
+          padding: 20px;
+          text-align: center;
+          background: #0f0e0e;
+          color: white;
+        }
+        .header h1 {
+          font-size: 40px;
+        }
+        .Retreat a {
+          padding-top: 30px;
+          padding-bottom: 30px;
+          display: block;
+          color: white;
+          text-align: center;
+          width: 100%;
+          text-decoration: none;
+        }
+        .Retreat a:hover {
+          background-color: #111;
+        }
+        .active {
+          background-color: #0967c8;
+        }
+        .center {
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+      </style>
+    {% endblock %}
   </head>
-<body style="background-color:#0F0E0E;"> {% block body %}
-  <div class="header">
-   <h1> 404 </h1>
-    <h3> You don't Exist.</h3>
-     <p> You stumbled upon a non-existent page :O <br/>
-     Check back in a few weeks and the page should be up. Most likely you
-     opened a in-development page.
-     <br/><br/>
-        If you feel this is a broken link, do not hesistate to alert me. <br/>
-        You can notify me at <a href="mailto: firstincommand111@gmail.com"> my email.</a>
-      </p>
-   </div> 
-   <div class="center">
-     <p align="center"> You might wanna go back to the Indexer now...</p>
-      <hr size="2"/> <br/>
-       <div class="Retreat">
-          <a href="index.html" class="active"> Fall Back to the <h1>Indexer</h1> </a>
-       </div>
-      <br/> <br/> <hr size="2"/> <br/>
-   </div>    {% endblock %}
+  <body>
+    {% block body %}
+      <header class = "header">
+        <h1> 404 </h1>
+        <h3> You don't Exist. </h3>
+        <p>
+          You stumbled upon a non-existent page :O <br />
+          Check back in a few weeks and the page should be up.
+          Most likely you opened a in-development page.
+          <br /><br />
+          If you feel this is a broken link, do not hesitate to alert me. <br />
+          You can notify me at <a href = "mailto: firstincommand111@gmail.com"> my email.</a>
+        </p>
+      </header>
+
+      <div class = "center">
+        <p > You might wanna go back to the Indexer now... </p>
+        <hr />
+        <br />
+        <div class = "Retreat">
+          <a href = "/" class = "active"> Fall Back to the <h1>Indexer</h1> </a>
+        </div>
+        <br />
+        <br />
+        <hr />
+        <br />
+      </div>
+    {% endblock %}
   </body>
 </html>

@@ -1,8 +1,5 @@
-const dotenv = require("dotenv");
-dotenv.config();
-
-const render = require("./lib/render");
-const router = require("./lib/router");
+const render = require("./render");
+const router = require("./router");
 const logger = require("koa-logger");
 const koaBody = require("koa-body");
 const static = require("koa-static");
@@ -12,24 +9,25 @@ const app = (module.exports = new Koa())
 
   // Middleware
   .use(logger())
-  .use(render)
   .use(koaBody())
+  .use(render)
   .use(router.routes())
   .use(static("public"))
   .use(async (ctx, next) => {
     try {
       await next();
-      if (ctx.status === 404) {
-        ctx.render("/404");
+      const status = ctx.status || 404;
+      if (status === 404) {
+        ctx.throw(404);
+        console.log(status);
       }
     } catch (err) {
       ctx.status = err.status || 500;
-      ctx.body = err.message;
-      ctx.app.emit("error", err, ctx);
+      if (ctx.status === 404) {
+        await ctx.render("404");
+      } else {
+        ctx.body = err.message;
+        ctx.app.emit("error", err, ctx);
+      }
     }
   });
-
-if (!module.parent)
-  app.listen(process.env.PORT, () =>
-    console.log(`App listening on port ${process.env.PORT}...`)
-  );

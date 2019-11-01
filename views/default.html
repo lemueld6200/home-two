@@ -1,30 +1,42 @@
 {% extends "layout.html" %}
+
 <html>
- <head>
-  <title> {% block title %} {% endblock %} </title>
-  {% block head %} {% endblock %}
- </head>
-<body> {% block body %}
- <div class="header"> 
-  <h1> Hello there! </h1> </div>
-   <nav class="nav topnav">
-    <ul>
-     <li> <a href="/Main/About.html"    > About </a> </li>
-     <li> <a href="/Main/Home.html"     > Home  </a> </li>
-     <li> <a href="/Main/Portfolio.html"> Portfolio </a> </li>
-    </ul>
-   </nav> 
-  
-    {% block content %} {% endblock %}
-  
- <div class="footer" style= "padding: 32px;">
-   <p> Hello there! </p>
-    <hr size = "2"> <br> 
-    <p align="left"> <b>Oswaldo De Los Santos </b>- Aspiring Game Developer </p>  <br> <br>
-    <font align="right" size="2"> Acknowledgements: Huge thanks to the writers and coders over at W3Schools for there insightful examples
-    And organized tutorials. Sections like the navigation bar and the dropdown menu has borrowed code from the website
-    As well as the various people who helped me get to this point. (i.e concept artists, mentors etc.)
-    </font>
- </div> {% endblock %}
-</body>
+  <head>
+    <title> {% block title %} Home One {% endblock %} </title>
+
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+      <header class = "header">
+        <h1> Hello there! </h1>
+      </header>
+      <nav class = "nav topnav">
+        <ul style = "margin: 0">
+          <li><a href = "/Main/About"> About </a></li>
+          <li><a href = "/Main/Home"> Home </a></li>
+          <li><a href = "/Main/Portfolio"> Portfolio </a></li>
+        </ul>
+      </nav>
+
+      {% block content %}
+        <strong> Missing CONTENT! </strong>
+      {% endblock %}
+
+      <footer class = "footer" style = "padding: 32px">
+        <p> Hello there! </p>
+        <hr />
+        <br />
+        <p><b> Oswaldo De Los Santos </b>- Aspiring Game Developer </p>
+        <br />
+        <br />
+        <p class = "thanks">
+          Acknowledgements: Huge thanks to the writers and coders over at W3Schools for there
+          insightful examples And organized tutorials. Sections like the navigation bar and the
+          dropdown menu has borrowed code from the website As well as the various people who helped me
+          get to this point. (i.e concept artists, mentors etc.)
+        </p>
+      </footer>
+    {% endblock %}
+  </body>
 </html>

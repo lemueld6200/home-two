@@ -1,45 +1,48 @@
 {% extends "../default.html" %}
 <html>
- <head>
-  <title> {% block title %} Update Log {% endblock %} </title> {% block head %}
-  <link rel="stylesheet" type="text/css" href="/css/SubcoreJBStyle.css" /> {% endblock %}
- </head>
-<body> {% block content %}
-<div class="row">
-  <div class="leftcolumn">
-    <div class="clickDiv card" data-href="/Update/2019-09.html">
-      <h2> The Indexer! </h2>
-      <h5> September 2019 </h5>
-      <p>  </p>
+  <head>
+     <title> {% block title %} Update Log {% endblock %} 
+    {% block head %}
+    <link rel = "stylesheet" type = "text/css" href = "/css/SubcoreJBStyle.css" />
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div class = "row">
+      <div class = "leftcolumn">
+        <div class = "clickDiv card" data-href = "/Update/2019-09">
+          <h2> The Indexer! </h2>
+          <h5> September 2019 </h5>
+          <p> </p>
+        </div>
+        <div class = "clickDiv card" data-href = "/Update/2019-10">
+          <h2> Functionality! </h2>
+          <h5> October 2019</h5>
+          <p> </p>
+        </div>
+        <div class = "clickDiv card" data-href = "/Update/2019-11">
+          <h2> Server Migration! </h2>
+          <h5> November 2019</h5>
+          <p> </p>
+        </div>
+      </div>
+      <div class = "rightcolumn">
+        <div class = "card">
+          <h3> Change/Update Log </h3>
+          <p>
+            Over here will be major changes/updates to my website. This, like Blog, is also meant to
+            document my CS journey but this is more directed towards the Blog's growth and my growth
+            over Web Development. This is gonna be a monthly kind of thing.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="clickDiv card" data-href="/Update/2019-10.html"> 
-      <h2> Functionality! </h2>
-      <h5> October 2019</h5>
-      <p> </p>
-    </div>
-    <div class="clickDiv card" data-href="/Update/2019-11.html"> 
-      <h2> Server Migration! </h2>
-      <h5> November 2019</h5>
-      <p> </p>
-    </div>
-  </div>
-  <div class="rightcolumn">  
-    <div class="card">
-     <h3> Change/Update Log  </h3>
-      <p> Over here will be major changes/updates to my website. This, like Blog, is also meant to document my CS journey
-      but this is more directed towards the Blog's growth and my growth over Web Development. This is gonna be a monthly
-      kind of thing. </p>
-    </div>
-  </div>
-</div> 
 
-<script> 
- /* Clickable Div(s) *//* ClickDiv */
-  $(".clickDiv").click(function(){
-    location.href = $(this).attr("data-href");
-  });
-
-
-</script>{% endblock %}
-</body>
+    <script>
+      /* Clickable Div(s) */ /* ClickDiv */
+      $(".clickDiv").click(function() {
+        location.href = $(this).attr("data-href");
+      });</script
+    >{% endblock %}
+  </body>
 </html>
